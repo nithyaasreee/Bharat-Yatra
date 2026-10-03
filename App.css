@@ -1,0 +1,1906 @@
+/* =====================================================
+   GLOBAL STYLES
+===================================================== */
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  min-height: 100%;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+
+/* =====================================================
+   HOME PAGE
+===================================================== */
+
+.home-page {
+  min-height: 100vh;
+  width: 100%;
+
+  background-image: url("/background.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  position: relative;
+  overflow: hidden;
+}
+
+.home-page::before {
+  content: "";
+
+  position: absolute;
+  inset: 0;
+
+  background: rgba(0, 0, 0, 0.18);
+
+  z-index: 0;
+}
+
+
+/* =====================================================
+   HOME NAVBAR
+===================================================== */
+
+.home-navbar {
+  position: relative;
+  z-index: 2;
+
+  width: 95%;
+  height: 92px;
+
+  margin: 25px auto 0;
+  padding: 0 38px;
+
+  background: rgba(255, 255, 255, 0.95);
+
+  border-radius: 18px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.12);
+}
+
+.home-logo {
+  font-size: 40px;
+  font-weight: 800;
+
+  color: #111;
+
+  white-space: nowrap;
+}
+
+.home-nav-links {
+  display: flex;
+  align-items: center;
+
+  gap: 38px;
+
+  font-size: 22px;
+
+  color: #111;
+}
+
+.home-nav-links span {
+  cursor: pointer;
+
+  white-space: nowrap;
+
+  transition: 0.3s;
+}
+
+.home-nav-links span:hover {
+  transform: translateY(-2px);
+}
+
+
+/* =====================================================
+   HOME HERO
+===================================================== */
+
+.home-hero {
+  position: relative;
+  z-index: 1;
+
+  min-height: calc(100vh - 117px);
+
+  display: flex;
+  flex-direction: column;
+
+  align-items: center;
+  justify-content: center;
+
+  text-align: center;
+
+  color: white;
+
+  padding-bottom: 70px;
+}
+
+.home-hero h1 {
+  margin: 0 0 25px;
+
+  font-size: 64px;
+  font-weight: 800;
+
+  color: white;
+
+  text-shadow: 2px 3px 8px rgba(0, 0, 0, 0.5);
+}
+
+.home-hero p {
+  margin: 0 0 35px;
+
+  font-size: 30px;
+  font-weight: 400;
+
+  color: white;
+
+  text-shadow: 2px 3px 7px rgba(0, 0, 0, 0.5);
+}
+
+
+/* =====================================================
+   TRAVEL PLAN BUTTON
+===================================================== */
+
+.travel-plan-button {
+  width: 300px;
+
+  padding: 23px 30px;
+
+  border: none;
+  border-radius: 12px;
+
+  background: white;
+  color: #111;
+
+  font-size: 25px;
+  font-weight: 700;
+
+  cursor: pointer;
+
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+
+  transition: 0.3s;
+}
+
+.travel-plan-button:hover {
+  transform: scale(1.05);
+
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+}
+
+
+/* =====================================================
+   INDIA TRAVEL GUIDE - STATES PAGE
+===================================================== */
+
+.states-page {
+  min-height: 100vh;
+
+  padding: 40px 6%;
+
+  background:
+    linear-gradient(
+      135deg,
+      #f8fbff 0%,
+      #eef6ff 45%,
+      #ffffff 100%
+    );
+
+  color: #1f2937;
+}
+
+
+/* =====================================================
+   STATES HEADER
+===================================================== */
+
+.states-header {
+  text-align: center;
+
+  margin-bottom: 35px;
+}
+
+.states-header h1 {
+  margin: 0;
+
+  font-size: 48px;
+  font-weight: 800;
+
+  color: #172554;
+}
+
+.states-header p {
+  margin-top: 10px;
+
+  font-size: 20px;
+
+  color: #64748b;
+}
+
+
+/* =====================================================
+   SEARCH
+===================================================== */
+
+.states-search {
+  display: flex;
+
+  justify-content: center;
+
+  margin-bottom: 25px;
+}
+
+.states-search input {
+  width: min(650px, 90%);
+
+  height: 58px;
+
+  padding: 0 22px;
+
+  border: 2px solid #dbeafe;
+
+  border-radius: 30px;
+
+  background: white;
+
+  font-size: 17px;
+
+  color: #1e293b;
+
+  outline: none;
+
+  box-shadow:
+    0 5px 18px rgba(30, 64, 175, 0.08);
+
+  transition: 0.3s;
+}
+
+.states-search input:focus {
+  border-color: #2563eb;
+
+  box-shadow:
+    0 5px 20px rgba(37, 99, 235, 0.15);
+}
+
+.states-search input::placeholder {
+  color: #94a3b8;
+}
+
+
+/* =====================================================
+   REGION BUTTONS
+===================================================== */
+
+.region-buttons {
+  display: flex;
+
+  justify-content: center;
+  align-items: center;
+
+  flex-wrap: wrap;
+
+  gap: 12px;
+
+  margin-bottom: 40px;
+}
+
+.region-buttons button {
+  padding: 11px 22px;
+
+  border: 1px solid #cbd5e1;
+
+  border-radius: 25px;
+
+  background: white;
+
+  color: #475569;
+
+  font-size: 15px;
+  font-weight: 600;
+
+  cursor: pointer;
+
+  transition: all 0.25s ease;
+}
+
+.region-buttons button:hover {
+  transform: translateY(-2px);
+
+  border-color: #2563eb;
+
+  color: #2563eb;
+
+  box-shadow:
+    0 5px 12px rgba(37, 99, 235, 0.12);
+}
+
+.region-buttons button.active-region {
+  background: #2563eb;
+
+  border-color: #2563eb;
+
+  color: white;
+
+  box-shadow:
+    0 5px 15px rgba(37, 99, 235, 0.25);
+}
+
+
+/* =====================================================
+   STATES GRID
+===================================================== */
+
+.states-grid {
+  max-width: 1400px;
+
+  margin: 0 auto;
+
+  display: grid;
+
+  grid-template-columns:
+    repeat(3, minmax(0, 1fr));
+
+  gap: 25px;
+}
+
+
+/* =====================================================
+   STATE CARD
+===================================================== */
+
+.state-card {
+  position: relative;
+
+  padding: 28px;
+
+  min-height: 245px;
+
+  background: rgba(255, 255, 255, 0.96);
+
+  border: 1px solid #e2e8f0;
+
+  border-radius: 20px;
+
+  box-shadow:
+    0 8px 25px rgba(15, 23, 42, 0.07);
+
+  cursor: pointer;
+
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease,
+    border-color 0.3s ease;
+
+  overflow: hidden;
+}
+
+
+/* Decorative top line */
+
+.state-card::before {
+  content: "";
+
+  position: absolute;
+
+  top: 0;
+  left: 0;
+
+  width: 100%;
+  height: 5px;
+
+  background:
+    linear-gradient(
+      90deg,
+      #2563eb,
+      #06b6d4
+    );
+}
+
+.state-card:hover {
+  transform: translateY(-7px);
+
+  border-color: #bfdbfe;
+
+  box-shadow:
+    0 15px 35px rgba(30, 64, 175, 0.15);
+}
+
+
+/* =====================================================
+   STATE NAME
+===================================================== */
+
+.state-card h2 {
+  margin: 5px 0 20px;
+
+  font-size: 25px;
+
+  color: #172554;
+
+  font-weight: 750;
+}
+
+
+/* =====================================================
+   STATE CARD TEXT
+===================================================== */
+
+.state-card p {
+  margin: 10px 0;
+
+  font-size: 16px;
+
+  line-height: 1.5;
+
+  color: #64748b;
+}
+
+.state-card p strong {
+  color: #334155;
+}
+
+
+/* =====================================================
+   REGION LABEL
+===================================================== */
+
+.state-region {
+  display: inline-block;
+
+  margin-top: 8px;
+
+  margin-bottom: 18px;
+
+  padding: 6px 13px;
+
+  border-radius: 20px;
+
+  background: #eff6ff;
+
+  color: #2563eb;
+
+  font-size: 13px;
+
+  font-weight: 700;
+
+  text-transform: uppercase;
+
+  letter-spacing: 0.5px;
+}
+
+
+/* =====================================================
+   EXPLORE BUTTON
+===================================================== */
+
+.explore-button {
+  display: block;
+
+  width: 100%;
+
+  padding: 12px 18px;
+
+  border: none;
+
+  border-radius: 10px;
+
+  background: #172554;
+
+  color: white;
+
+  font-size: 16px;
+
+  font-weight: 700;
+
+  cursor: pointer;
+
+  transition: all 0.25s ease;
+}
+
+.explore-button:hover {
+  background: #2563eb;
+
+  transform: translateY(-2px);
+
+  box-shadow:
+    0 6px 15px rgba(37, 99, 235, 0.25);
+}
+
+
+/* =====================================================
+   NO RESULTS
+===================================================== */
+
+.no-results {
+  text-align: center;
+
+  padding: 70px 20px;
+
+  color: #64748b;
+}
+
+.no-results h2 {
+  margin-bottom: 10px;
+
+  font-size: 28px;
+
+  color: #334155;
+}
+
+.no-results p {
+  font-size: 17px;
+}
+
+
+/* =====================================================
+   HOME MOBILE
+===================================================== */
+
+@media (max-width: 768px) {
+
+  .home-navbar {
+    height: auto;
+
+    padding: 20px;
+
+    flex-direction: column;
+
+    gap: 15px;
+  }
+
+  .home-logo {
+    font-size: 30px;
+  }
+
+  .home-nav-links {
+    gap: 15px;
+
+    font-size: 15px;
+
+    flex-wrap: wrap;
+
+    justify-content: center;
+  }
+
+  .home-hero h1 {
+    font-size: 42px;
+  }
+
+  .home-hero p {
+    font-size: 22px;
+  }
+
+  .travel-plan-button {
+    width: 240px;
+
+    font-size: 20px;
+  }
+}
+
+
+/* =====================================================
+   STATES TABLET
+===================================================== */
+
+@media (max-width: 1000px) {
+
+  .states-page {
+    padding: 35px 4%;
+  }
+
+  .states-grid {
+    grid-template-columns:
+      repeat(2, minmax(0, 1fr));
+  }
+
+  .states-header h1 {
+    font-size: 40px;
+  }
+}
+
+
+/* =====================================================
+   STATES MOBILE
+===================================================== */
+
+@media (max-width: 650px) {
+
+  .states-page {
+    padding: 25px 18px;
+  }
+
+  .states-header h1 {
+    font-size: 32px;
+  }
+
+  .states-header p {
+    font-size: 16px;
+  }
+
+  .states-search input {
+    width: 100%;
+
+    height: 52px;
+
+    font-size: 15px;
+  }
+
+  .region-buttons {
+    gap: 8px;
+
+    margin-bottom: 30px;
+  }
+
+  .region-buttons button {
+    padding: 9px 15px;
+
+    font-size: 13px;
+  }
+
+  .states-grid {
+    grid-template-columns: 1fr;
+
+    gap: 18px;
+  }
+
+  .state-card {
+    padding: 23px;
+
+    min-height: 220px;
+  }
+
+  .state-card h2 {
+    font-size: 22px;
+  }
+}
+
+
+/* =====================================================
+   STATE DETAILS PAGE
+===================================================== */
+
+.state-details-page {
+  min-height: 100vh;
+
+  background:
+    linear-gradient(
+      135deg,
+      #f8fbff 0%,
+      #eef6ff 50%,
+      #ffffff 100%
+    );
+
+  color: #1e293b;
+}
+
+
+/* =====================================================
+   TOP BAR
+===================================================== */
+
+.state-top-bar {
+  width: 100%;
+
+  padding: 18px 6%;
+
+  background: white;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  border-bottom: 1px solid #e2e8f0;
+
+  box-shadow:
+    0 3px 15px rgba(15, 23, 42, 0.06);
+}
+
+.state-brand {
+  font-size: 24px;
+
+  font-weight: 800;
+
+  color: #172554;
+}
+
+.back-button {
+  padding: 11px 20px;
+
+  border: none;
+
+  border-radius: 10px;
+
+  background: #eff6ff;
+
+  color: #2563eb;
+
+  font-size: 15px;
+
+  font-weight: 700;
+
+  cursor: pointer;
+
+  transition: 0.25s;
+}
+
+.back-button:hover {
+  background: #2563eb;
+
+  color: white;
+
+  transform: translateX(-3px);
+}
+
+
+/* =====================================================
+   STATE HERO
+===================================================== */
+
+.state-hero {
+  position: relative;
+
+  min-height: 330px;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  text-align: center;
+
+  padding: 60px 20px;
+
+  background:
+    linear-gradient(
+      135deg,
+      #172554,
+      #1d4ed8,
+      #0891b2
+    );
+
+  overflow: hidden;
+}
+
+
+/* Decorative circles */
+
+.state-hero::before {
+  content: "";
+
+  position: absolute;
+
+  width: 400px;
+  height: 400px;
+
+  border-radius: 50%;
+
+  background: rgba(255, 255, 255, 0.08);
+
+  top: -220px;
+  left: -100px;
+}
+
+.state-hero::after {
+  content: "";
+
+  position: absolute;
+
+  width: 450px;
+  height: 450px;
+
+  border-radius: 50%;
+
+  background: rgba(255, 255, 255, 0.07);
+
+  right: -150px;
+  bottom: -280px;
+}
+
+.state-hero-content {
+  position: relative;
+
+  z-index: 2;
+}
+
+.india-badge {
+  display: inline-block;
+
+  padding: 8px 18px;
+
+  margin-bottom: 18px;
+
+  border-radius: 30px;
+
+  background: rgba(255, 255, 255, 0.16);
+
+  border: 1px solid rgba(255, 255, 255, 0.3);
+
+  color: white;
+
+  font-size: 14px;
+
+  font-weight: 700;
+}
+
+.state-hero h1 {
+  margin: 0 0 30px;
+
+  color: white;
+
+  font-size: 58px;
+
+  font-weight: 800;
+
+  letter-spacing: 0.5px;
+}
+
+
+/* =====================================================
+   STATE INFORMATION
+===================================================== */
+
+.state-info {
+  display: flex;
+
+  justify-content: center;
+
+  gap: 20px;
+
+  flex-wrap: wrap;
+}
+
+.info-item {
+  min-width: 230px;
+
+  padding: 15px 22px;
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 14px;
+
+  text-align: left;
+
+  background: rgba(255, 255, 255, 0.12);
+
+  border: 1px solid rgba(255, 255, 255, 0.22);
+
+  border-radius: 14px;
+
+  color: white;
+}
+
+.info-item > span {
+  font-size: 28px;
+}
+
+.info-item small {
+  display: block;
+
+  margin-bottom: 3px;
+
+  color: rgba(255, 255, 255, 0.75);
+
+  font-size: 12px;
+
+  text-transform: uppercase;
+
+  letter-spacing: 0.8px;
+}
+
+.info-item strong {
+  display: block;
+
+  font-size: 17px;
+
+  color: white;
+}
+
+
+/* =====================================================
+   MAIN CONTENT
+===================================================== */
+
+.state-content {
+  max-width: 1400px;
+
+  margin: 0 auto;
+
+  padding: 55px 6%;
+}
+
+
+/* =====================================================
+   CATEGORY SECTION
+===================================================== */
+
+.place-category {
+  margin-bottom: 65px;
+}
+
+
+/* =====================================================
+   CATEGORY HEADING
+===================================================== */
+
+.category-heading {
+  display: flex;
+
+  align-items: center;
+
+  gap: 18px;
+
+  margin-bottom: 28px;
+}
+
+.category-icon {
+  width: 58px;
+  height: 58px;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 16px;
+
+  background: white;
+
+  font-size: 28px;
+
+  box-shadow:
+    0 6px 20px rgba(15, 23, 42, 0.08);
+}
+
+.category-heading h2 {
+  margin: 0;
+
+  font-size: 30px;
+
+  color: #172554;
+}
+
+.category-heading p {
+  margin: 5px 0 0;
+
+  font-size: 15px;
+
+  color: #64748b;
+}
+
+
+/* =====================================================
+   PLACES GRID
+===================================================== */
+
+.places-grid {
+  display: grid;
+
+  grid-template-columns:
+    repeat(3, minmax(0, 1fr));
+
+  gap: 22px;
+}
+
+
+/* =====================================================
+   PLACE CARD
+===================================================== */
+
+.place-card {
+  position: relative;
+
+  min-height: 330px;
+
+  background: white;
+
+  border: 1px solid #e2e8f0;
+
+  border-radius: 18px;
+
+  overflow: hidden;
+
+  box-shadow:
+    0 7px 25px rgba(15, 23, 42, 0.07);
+
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease,
+    border-color 0.3s ease;
+}
+
+.place-card:hover {
+  transform: translateY(-6px);
+
+  border-color: #bfdbfe;
+
+  box-shadow:
+    0 15px 35px rgba(30, 64, 175, 0.14);
+}
+
+
+/* =====================================================
+   PLACE NUMBER
+===================================================== */
+
+.place-number {
+  position: absolute;
+
+  top: 18px;
+  right: 18px;
+
+  font-size: 42px;
+
+  font-weight: 800;
+
+  color: #eff6ff;
+
+  line-height: 1;
+}
+
+
+/* =====================================================
+   PLACE CONTENT
+===================================================== */
+
+.place-card-content {
+  position: relative;
+
+  z-index: 1;
+
+  padding: 28px;
+}
+
+.place-card h3 {
+  margin: 0 45px 20px 0;
+
+  font-size: 23px;
+
+  line-height: 1.3;
+
+  color: #172554;
+}
+
+
+/* =====================================================
+   PLACE DETAILS
+===================================================== */
+
+.place-details {
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 9px;
+
+  margin-bottom: 18px;
+}
+
+.place-details p {
+  display: flex;
+
+  align-items: flex-start;
+
+  gap: 7px;
+
+  margin: 0;
+
+  font-size: 14px;
+
+  line-height: 1.5;
+
+  color: #64748b;
+}
+
+.place-details p span {
+  width: 20px;
+
+  flex-shrink: 0;
+}
+
+.place-details strong {
+  color: #334155;
+
+  margin-right: 3px;
+}
+
+
+/* =====================================================
+   DESCRIPTION
+===================================================== */
+
+.place-description {
+  padding-top: 15px;
+
+  margin-bottom: 20px;
+
+  border-top: 1px solid #e2e8f0;
+
+  font-size: 14px;
+
+  line-height: 1.6;
+
+  color: #64748b;
+}
+
+
+/* =====================================================
+   GOOGLE MAPS BUTTON
+===================================================== */
+
+.map-button {
+  display: block;
+
+  width: 100%;
+
+  padding: 12px 15px;
+
+  text-align: center;
+
+  text-decoration: none;
+
+  border-radius: 10px;
+
+  background: #eff6ff;
+
+  color: #2563eb;
+
+  font-size: 14px;
+
+  font-weight: 700;
+
+  transition: 0.25s;
+}
+
+.map-button:hover {
+  background: #2563eb;
+
+  color: white;
+
+  transform: translateY(-2px);
+}
+
+
+/* =====================================================
+   CATEGORY COLOR ACCENTS
+===================================================== */
+
+.devotional-section .category-icon {
+  background: #fff7ed;
+}
+
+.hills-section .category-icon {
+  background: #f0fdf4;
+}
+
+.waterfalls-section .category-icon {
+  background: #eff6ff;
+}
+
+.adventure-section .category-icon {
+  background: #fef2f2;
+}
+
+.food-section .category-icon {
+  background: #fffbeb;
+}
+
+
+/* =====================================================
+   BOTTOM BUTTON
+===================================================== */
+
+.state-bottom {
+  display: flex;
+
+  justify-content: center;
+
+  padding: 10px 20px 60px;
+}
+
+.back-states-button {
+  padding: 14px 28px;
+
+  border: none;
+
+  border-radius: 12px;
+
+  background: #172554;
+
+  color: white;
+
+  font-size: 16px;
+
+  font-weight: 700;
+
+  cursor: pointer;
+
+  transition: 0.25s;
+}
+
+.back-states-button:hover {
+  background: #2563eb;
+
+  transform: translateY(-2px);
+
+  box-shadow:
+    0 8px 20px rgba(37, 99, 235, 0.2);
+}
+
+
+/* =====================================================
+   STATE NOT FOUND
+===================================================== */
+
+.state-not-found {
+  min-height: 100vh;
+
+  display: flex;
+
+  flex-direction: column;
+
+  align-items: center;
+
+  justify-content: center;
+
+  gap: 20px;
+
+  background: #f8fafc;
+
+  text-align: center;
+}
+
+.state-not-found h1 {
+  color: #172554;
+}
+
+.state-not-found button {
+  padding: 12px 25px;
+
+  border: none;
+
+  border-radius: 10px;
+
+  background: #2563eb;
+
+  color: white;
+
+  font-weight: 700;
+
+  cursor: pointer;
+}
+
+
+/* =====================================================
+   STATE DETAILS TABLET
+===================================================== */
+
+@media (max-width: 1000px) {
+
+  .places-grid {
+    grid-template-columns:
+      repeat(2, minmax(0, 1fr));
+  }
+
+  .state-hero h1 {
+    font-size: 48px;
+  }
+
+  .state-content {
+    padding-left: 4%;
+    padding-right: 4%;
+  }
+}
+
+
+/* =====================================================
+   STATE DETAILS MOBILE
+===================================================== */
+
+@media (max-width: 650px) {
+
+  .state-top-bar {
+    padding: 15px 18px;
+  }
+
+  .state-brand {
+    font-size: 18px;
+  }
+
+  .back-button {
+    padding: 9px 13px;
+
+    font-size: 13px;
+  }
+
+  .state-hero {
+    min-height: 380px;
+
+    padding: 45px 18px;
+  }
+
+  .state-hero h1 {
+    font-size: 38px;
+
+    margin-bottom: 25px;
+  }
+
+  .state-info {
+    flex-direction: column;
+
+    align-items: stretch;
+
+    gap: 10px;
+  }
+
+  .info-item {
+    min-width: 0;
+
+    width: 100%;
+  }
+
+  .state-content {
+    padding: 40px 18px;
+  }
+
+  .place-category {
+    margin-bottom: 45px;
+  }
+
+  .category-heading {
+    align-items: flex-start;
+
+    gap: 12px;
+  }
+
+  .category-icon {
+    width: 48px;
+    height: 48px;
+
+    flex-shrink: 0;
+
+    font-size: 23px;
+  }
+
+  .category-heading h2 {
+    font-size: 23px;
+  }
+
+  .category-heading p {
+    font-size: 13px;
+  }
+
+  .places-grid {
+    grid-template-columns: 1fr;
+
+    gap: 17px;
+  }
+
+  .place-card {
+    min-height: auto;
+  }
+
+  .place-card-content {
+    padding: 23px;
+  }
+
+  .place-card h3 {
+    font-size: 21px;
+  }
+}
+/* =====================================================
+   HOME ABOUT / SERVICE / CONTACT
+===================================================== */
+
+.home-logo {
+  cursor: pointer;
+}
+
+
+/* =====================================================
+   INFORMATION SECTION
+===================================================== */
+
+.home-info-section {
+  position: relative;
+  z-index: 2;
+
+  min-height: calc(100vh - 117px);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 50px 20px 80px;
+}
+
+
+/* =====================================================
+   INFORMATION CARD
+===================================================== */
+
+.home-info-card {
+  position: relative;
+
+  width: min(850px, 95%);
+
+  max-height: 75vh;
+
+  overflow-y: auto;
+
+  padding: 50px;
+
+  background: rgba(255, 255, 255, 0.97);
+
+  border-radius: 25px;
+
+  box-shadow:
+    0 20px 60px rgba(0, 0, 0, 0.25);
+
+  text-align: center;
+}
+
+.home-info-card h1 {
+  margin: 10px 0 25px;
+
+  font-size: 42px;
+
+  color: #172554;
+}
+
+.home-info-card > p {
+  max-width: 700px;
+
+  margin: 15px auto;
+
+  font-size: 18px;
+
+  line-height: 1.7;
+
+  color: #64748b;
+}
+
+
+/* =====================================================
+   CLOSE BUTTON
+===================================================== */
+
+.close-info-button {
+  position: absolute;
+
+  top: 18px;
+  right: 20px;
+
+  width: 40px;
+  height: 40px;
+
+  border: none;
+
+  border-radius: 50%;
+
+  background: #eff6ff;
+
+  color: #2563eb;
+
+  font-size: 18px;
+
+  font-weight: 700;
+
+  cursor: pointer;
+
+  transition: 0.25s;
+}
+
+.close-info-button:hover {
+  background: #2563eb;
+
+  color: white;
+
+  transform: rotate(90deg);
+}
+
+
+/* =====================================================
+   INFORMATION ICON
+===================================================== */
+
+.info-icon {
+  width: 75px;
+  height: 75px;
+
+  margin: 0 auto 15px;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 20px;
+
+  background: #eff6ff;
+
+  font-size: 38px;
+}
+
+
+/* =====================================================
+   SERVICES
+===================================================== */
+
+.service-list {
+  display: grid;
+
+  grid-template-columns:
+    repeat(2, minmax(0, 1fr));
+
+  gap: 18px;
+
+  margin-top: 30px;
+}
+
+.service-item {
+  display: flex;
+
+  align-items: flex-start;
+
+  gap: 15px;
+
+  padding: 20px;
+
+  text-align: left;
+
+  background: #f8fbff;
+
+  border: 1px solid #dbeafe;
+
+  border-radius: 15px;
+
+  transition: 0.25s;
+}
+
+.service-item:hover {
+  transform: translateY(-4px);
+
+  border-color: #93c5fd;
+
+  box-shadow:
+    0 8px 20px rgba(37, 99, 235, 0.12);
+}
+
+.service-item > span {
+  font-size: 30px;
+
+  flex-shrink: 0;
+}
+
+.service-item h3 {
+  margin: 0 0 7px;
+
+  font-size: 18px;
+
+  color: #172554;
+}
+
+.service-item p {
+  margin: 0;
+
+  font-size: 14px;
+
+  line-height: 1.5;
+
+  color: #64748b;
+}
+
+
+/* =====================================================
+   CONTACT
+===================================================== */
+
+.contact-card {
+  max-width: 700px;
+}
+
+.contact-details {
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 15px;
+
+  margin-top: 30px;
+}
+
+.contact-item {
+  display: flex;
+
+  align-items: center;
+
+  gap: 18px;
+
+  padding: 18px 22px;
+
+  background: #f8fbff;
+
+  border: 1px solid #dbeafe;
+
+  border-radius: 15px;
+
+  text-align: left;
+}
+
+.contact-item > span {
+  width: 50px;
+  height: 50px;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 12px;
+
+  background: #eff6ff;
+
+  font-size: 25px;
+
+  flex-shrink: 0;
+}
+
+.contact-item h3 {
+  margin: 0 0 5px;
+
+  font-size: 17px;
+
+  color: #172554;
+}
+
+.contact-item p {
+  margin: 0;
+
+  font-size: 15px;
+
+  color: #64748b;
+}
+
+
+/* =====================================================
+   ABOUT / SERVICE / CONTACT MOBILE
+===================================================== */
+
+@media (max-width: 650px) {
+
+  .home-info-section {
+    padding: 35px 15px 60px;
+
+    align-items: flex-start;
+  }
+
+  .home-info-card {
+    width: 100%;
+
+    padding: 35px 20px;
+
+    max-height: 80vh;
+
+    border-radius: 20px;
+  }
+
+  .home-info-card h1 {
+    font-size: 30px;
+
+    margin-bottom: 20px;
+  }
+
+  .home-info-card > p {
+    font-size: 15px;
+
+    line-height: 1.6;
+  }
+
+  .info-icon {
+    width: 60px;
+    height: 60px;
+
+    font-size: 30px;
+  }
+
+  .service-list {
+    grid-template-columns: 1fr;
+
+    gap: 12px;
+  }
+
+  .service-item {
+    padding: 16px;
+  }
+
+  .service-item > span {
+    font-size: 25px;
+  }
+
+  .contact-item {
+    padding: 15px;
+
+    gap: 12px;
+  }
+
+  .contact-item > span {
+    width: 43px;
+    height: 43px;
+
+    font-size: 21px;
+  }
+
+  .contact-item h3 {
+    font-size: 15px;
+  }
+
+  .contact-item p {
+    font-size: 13px;
+  }
+}
+/* ================================
+   CONTACT EMAIL
+================================ */
+
+.contact-email {
+  margin: 20px auto;
+  padding: 14px 20px;
+  width: fit-content;
+  max-width: 100%;
+  background: #eff6ff;
+  border: 1px solid #bfdbfe;
+  border-radius: 12px;
+  color: #1d4ed8;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+
+/* ================================
+   CONTACT FORM
+================================ */
+
+.contact-form {
+  width: 100%;
+  margin-top: 30px;
+  text-align: left;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 8px;
+  font-size: 16px;
+  font-weight: 700;
+  color: #172554;
+}
+
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  padding: 14px 16px;
+  border: 1px solid #cbd5e1;
+  border-radius: 12px;
+  background: #ffffff;
+  font-size: 16px;
+  font-family: Arial, Helvetica, sans-serif;
+  outline: none;
+  transition: 0.25s;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+  border-color: #2563eb;
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
+}
+
+.form-group textarea {
+  resize: vertical;
+  min-height: 140px;
+}
+
+
+/* ================================
+   SEND MESSAGE BUTTON
+================================ */
+
+.send-message-button {
+  width: 100%;
+  padding: 15px 20px;
+  border: none;
+  border-radius: 12px;
+  background: #2563eb;
+  color: white;
+  font-size: 17px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.send-message-button:hover {
+  background: #1d4ed8;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 18px rgba(37, 99, 235, 0.25);
+}
+
+
+/* ================================
+   FORM STATUS
+================================ */
+
+.form-status {
+  margin-top: 18px;
+  padding: 12px;
+  border-radius: 10px;
+  background: #eff6ff;
+  color: #1e40af;
+  text-align: center;
+  font-size: 15px;
+  font-weight: 600;
+}
+
+
+/* ================================
+   CONTACT NOTE
+================================ */
+
+.contact-note {
+  margin-top: 20px !important;
+  font-size: 14px !important;
+  color: #64748b !important;
+}
+
+
+/* ================================
+   MOBILE CONTACT FORM
+================================ */
+
+@media (max-width: 650px) {
+
+  .contact-email {
+    font-size: 14px;
+    padding: 12px 15px;
+  }
+
+  .contact-form {
+    margin-top: 20px;
+  }
+
+  .form-group label {
+    font-size: 14px;
+  }
+
+  .form-group input,
+  .form-group textarea {
+    padding: 12px;
+    font-size: 14px;
+  }
+
+  .send-message-button {
+    font-size: 15px;
+    padding: 13px;
+  }
+
+}
